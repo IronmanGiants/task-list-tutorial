@@ -61,6 +61,7 @@ export const updateTasks = async ({ id, name, completed }) => {
   return response;
 };
 
+//deleteTasks function
 export const deleteTasks = async (id) => {
   const command = new DeleteCommand({
     TableName: "Tasks",

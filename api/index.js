@@ -49,6 +49,7 @@ app.put("/task", async (req, res) => {
   }
 });
 
+//api to delete tasks
 app.delete("/task/:id", async (req, res) => {
   try {
     const { id } = req.params;
