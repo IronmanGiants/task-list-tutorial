@@ -1,5 +1,5 @@
 import express from "express";
-import { fetchTasks, createTasks, updateTasks } from "./task";
+import { fetchTasks, createTasks, updateTasks } from "./task.js";
 import serverless from "serverless-http";
 import cors from "cors";
 const app = express();
@@ -12,7 +12,7 @@ if (process.env.DEVELOPMENT) {
 }
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.status(200).send("Hello World !!");
 });
 
 app.get("/task", async (req, res) => {

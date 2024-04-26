@@ -18,7 +18,9 @@ export const fetchTasks = async () => {
     TableName: "Tasks",
   });
 
-  const response = await docClient(command);
+  const response = await docClient.send(command);
+
+  return response;
 };
 
 export const createTasks = async ({ name, completed }) => {
