@@ -13,7 +13,7 @@ const darkTheme = createTheme({
 });
 
 export default function App() {
-  const [task, setTask] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
     try {
@@ -28,8 +28,6 @@ export default function App() {
   useEffect(() => {
     fetchTasks();
   }, []);
-
-  useEffect;
 
   return (
     <ThemeProvider theme={darkTheme}>
